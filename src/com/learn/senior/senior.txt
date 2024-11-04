@@ -1,0 +1,11 @@
+查看当前连接，事务的提交方式（ON 自动提交、OFF 关闭自动提交，需要手动提交）
+SHOW VARIABLES LIKE 'autocommit'
+
+0，false都是设置当前连接的事务提交方法为手动提交
+SET autocommit = FALSE;
+
+提交事务：让当前连接的操作，提交，对数据库产生影响，持久性影响
+cimmit;
+
+回滚事务：让当前连接的操作，回滚到数据修改前的状态
+ROLLBACK;
